@@ -1,5 +1,5 @@
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
-    'use strict';
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass, display = "block") => {
+    // 'use strict';
     
     const header = document.querySelector(headerSelector),
             tab = document.querySelectorAll(tabSelector),
@@ -16,7 +16,7 @@ const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
     }
 
     function showTabContent(i = 0) {
-        content[i].style.display = "block";
+        content[i].style.display = display;
         tab[i].classList.add(activeClass);
     }
 
